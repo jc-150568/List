@@ -15,6 +15,11 @@ namespace SQLiteSample
         public TabbedPage1()
         {
             InitializeComponent();
+
+            Children.Add(new MainPage());
+
         }
+
+
     }
 }
