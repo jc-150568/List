@@ -13,7 +13,8 @@ namespace SQLiteSample
         {
             InitializeComponent();
 
-            MainPage = new SQLiteSample.MainPage();
+            //MainPage = new SQLiteSample.MainPage();
+            new TabbedPage1();
         }
 
         protected override void OnStart()
