@@ -49,5 +49,7 @@
 	<string>1.0</string>
 	<key>UIMainStoryboardFile</key>
 	<string>LaunchScreen</string>
+	<key>CFBundleName</key>
+	<string>SQLiteSample</string>
 </dict>
 </plist>

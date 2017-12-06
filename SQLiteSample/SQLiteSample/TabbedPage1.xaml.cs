@@ -17,6 +17,7 @@ namespace SQLiteSample
             InitializeComponent();
 
             Children.Add(new MainPage());
+            Children.Add(new InsertPage());
 
         }
 
