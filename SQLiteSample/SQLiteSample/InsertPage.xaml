@@ -12,6 +12,7 @@
             <Entry x:Name="eNotes" Placeholder="notes" />
             <Label Text="count" />
             <Entry x:Name="eCount" Placeholder="count" />
+            <DatePicker x:Name="eCreated" Format = "d"/>
 
             <Button Text="add Item" x:Name="addItemButton"
                 Clicked="Handle_Clicked" />
