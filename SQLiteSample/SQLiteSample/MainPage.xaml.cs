@@ -49,7 +49,7 @@ namespace SQLiteSample
                 layout2.Children.Add(new Label() { Text = i.ID+"" });
                 layout2.Children.Add(new Label() { Text = i.Name });
                 layout2.Children.Add(new Label() { Text = i.Notes });
-                layout2.Children.Add(new Switch(){ IsEnabled=i.Done});
+                layout2.Children.Add(new Label() { Text = i.count + "" });
             }
 
             Content = layout;

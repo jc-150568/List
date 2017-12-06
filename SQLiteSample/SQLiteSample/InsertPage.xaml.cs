@@ -17,9 +17,10 @@ namespace SQLiteSample
             var db = MainPage.getDatabase();
             String sName = eName.Text;
             String sNotes = eNotes.Text;
-            Boolean bDone = eDone.IsToggled;
+            //Boolean bDone = eDone.IsToggled;
+            int iCount = int.Parse(eCount.Text);
 
-            TodoItem item = new TodoItem() { Name = sName, Notes = sNotes, Done = bDone };
+            TodoItem item = new TodoItem() { Name = sName, Notes = sNotes, count=iCount };
             db.SaveItemAsync(item);
             DisplayAlert("TodoItem","追加されたよ","OK");
         }

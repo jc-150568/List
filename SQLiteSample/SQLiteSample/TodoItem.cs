@@ -15,5 +15,6 @@ namespace SQLiteSample
         public string Name { get; set; }
         public string Notes { get; set; }
         public bool Done { get; set; }
+        public int count { get; set; }
     }
 }

@@ -5,13 +5,14 @@
     x:Class="SQLiteSample.InsertPage" 
     Title="InsertItem">
 	<ContentPage.Content>
-        <StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
             <Label Text="name" />
             <Entry x:Name="eName" Placeholder="name" />
             <Label Text="notes" />
             <Entry x:Name="eNotes" Placeholder="notes" />
-            <Label Text="done" />
-            <Switch x:Name="eDone" IsToggled="false" />
+            <Label Text="count" />
+            <Entry x:Name="eCount" Placeholder="count" />
+
             <Button Text="add Item" x:Name="addItemButton"
                 Clicked="Handle_Clicked" />
         </StackLayout>
