@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace SQLiteSample
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage2 : ContentPage
     {
 
-        public MainPage()
+        public MainPage2()
         {
             InitializeComponent();
         }
@@ -28,7 +28,7 @@ namespace SQLiteSample
             //listView.ItemsSource = await App.Database.GetItemsAsync();
             TodoItemDatabase itemDataBase = TodoItemDatabase.getDatabase();
             List<TodoItem> itemList;
-            itemList = await itemDataBase.GetItemsAsync();
+            itemList = await itemDataBase.GetItemsNotDoneAsync();
             int size = itemList.Count;
             layout.Children.Add(new Label() { Text = size + "件のデータ" });
             ScrollView view = new ScrollView()
@@ -57,6 +57,6 @@ namespace SQLiteSample
 
             Content = layout;
         }
-
     }
+
 }

@@ -5,14 +5,17 @@
     x:Class="SQLiteSample.InsertPage" 
     Title="InsertItem">
 	<ContentPage.Content>
-        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
             <Label Text="name" />
             <Entry x:Name="eName" Placeholder="name" />
             <Label Text="notes" />
             <Entry x:Name="eNotes" Placeholder="notes" />
             <Label Text="count" />
-            <Entry x:Name="eCount" Placeholder="count" />
-            <DatePicker x:Name="eCreated" Format = "d"/>
+            <Entry x:Name="eCount" Placeholder="count" Text="0"/>
+            <Label Text="created" />
+            <DatePicker x:Name="eCreated" Format = "yyyy/MM/dd"/>
+            <Label Text="Done" />
+            <Switch x:Name="eDone" IsToggled="true" />
 
             <Button Text="add Item" x:Name="addItemButton"
                 Clicked="Handle_Clicked" />

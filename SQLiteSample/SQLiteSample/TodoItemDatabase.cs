@@ -2,6 +2,8 @@
 using System.Threading.Tasks;
 using SQLite;
 
+using Xamarin.Forms;
+
 namespace SQLiteSample
 {
     public class TodoItemDatabase
@@ -21,7 +23,9 @@ namespace SQLiteSample
 
         public Task<List<TodoItem>> GetItemsNotDoneAsync()
         {
-            return database.QueryAsync<TodoItem>("SELECT * FROM [TodoItem] WHERE [Done] = 0");
+            return database.QueryAsync<TodoItem>("SELECT * FROM [TodoItem] WHERE [Done] = 0 "
+                                                 // + "order by [Created]"
+                                                );
         }
 
         public Task<TodoItem> GetItemAsync(int id)
@@ -45,5 +49,17 @@ namespace SQLiteSample
         {
             return database.DeleteAsync(item);
         }
+
+        private static TodoItemDatabase db = null;
+
+        public static TodoItemDatabase getDatabase()
+        {
+            if (db == null)
+            {
+                db = new TodoItemDatabase(DependencyService.Get<IFileHelper>().GetLocalFilePath("TodoSQLite.db3"));
+            }
+            return db;
+        }
+    
     }
 }
