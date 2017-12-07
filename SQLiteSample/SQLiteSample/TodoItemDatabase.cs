@@ -24,7 +24,7 @@ namespace SQLiteSample
         public Task<List<TodoItem>> GetItemsNotDoneAsync()
         {
             return database.QueryAsync<TodoItem>("SELECT * FROM [TodoItem] WHERE [Done] = 0 "
-                                                 // + "order by [Created]"
+                                                  + " order by [Created] desc"
                                                 );
         }
 
